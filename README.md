@@ -1,12 +1,20 @@
-# React + Vite
+# milkynotes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**milkynotes** is a super simple, serverless text editor built with [Milkdown](https://milkdown.dev/) and [RemoteStorage](https://remotestorage.io/). It runs entirely in your browser and syncs your notes across devices.
 
-Currently, two official plugins are available:
+Try it here: [weterynarzfred.github.io/milkynotes](https://weterynarzfred.github.io/milkynotes/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
 
-## Expanding the ESLint configuration
+You’ll need a [RemoteStorage](https://remotestorage.io/) account to sync and persist your notes.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+You can get a free one at [5apps.com/storage](https://5apps.com/storage)
+
+## Development
+
+```bash
+git clone https://github.com/weterynarzfred/milkynotes.git
+cd milkynotes
+npm install
+npm run dev
+```

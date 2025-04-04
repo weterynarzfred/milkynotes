@@ -1,12 +1,15 @@
 {
-  "name": "rs-notes",
+  "name": "milkynotes",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "description": "super simple, serverless text editor built with Milkdown and RemoteStorage",
+  "license": "Unlicense",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@milkdown/core": "^7.7.0",
@@ -23,13 +26,14 @@
     "remotestoragejs": "^2.0.0-beta.7"
   },
   "devDependencies": {
-    "@eslint/js": "^9.21.0",
+    "@eslint/js": "^9.23.0",
     "@vitejs/plugin-react": "^4.3.4",
-    "eslint": "^9.21.0",
-    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint": "^9.23.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
-    "globals": "^15.15.0",
-    "sass-embedded": "^1.86.2",
-    "vite": "^6.2.0"
+    "gh-pages": "^6.3.0",
+    "globals": "^16.0.0",
+    "sass-embedded": "^1.86.3",
+    "vite": "^6.2.5"
   }
 }

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Editor from "./Editor";
+import EditorArea from "./EditorArea";
 import { ACTIONS, useUpdate } from "./StateProvider";
 import remoteStorage, { remoteStorageClient } from "../lib/remoteStorage";
 
@@ -7,12 +7,7 @@ export default function App() {
   const dispatch = useUpdate();
 
   useEffect(() => {
-    remoteStorage.on('connected', async () => {
-      console.log('[RemoteStorage] connected');
-    });
-
     remoteStorage.on('ready', async () => {
-      console.log('[RemoteStorage] ready');
       dispatch({
         type: ACTIONS.UPDATE_RS_STATUS,
         payload: true,
@@ -31,7 +26,7 @@ export default function App() {
 
   return (
     <>
-      <Editor noteId={0} />
+      <EditorArea noteId={0} />
     </>
   );
 }

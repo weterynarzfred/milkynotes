@@ -5,3 +5,53 @@ body {
   color: #eee;
   font-family: sans-serif;
 }
+
+#remotestorage-widget {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.EditorArea {
+  white-space: pre-wrap;
+  margin: 3rem auto;
+  padding: 0 3rem;
+  max-width: 60rem;
+
+  .milkdown {
+    --crepe-color-background: transparent;
+    --crepe-color-on-background: #eee;
+    --crepe-color-outline: #eee;
+    --crepe-font-title: "Crimson Text", serif;
+    --crepe-font-default: "Crimson Text", serif;
+    --crepe-font-code: "Fira Code", monospace;
+
+    .ProseMirror {
+      padding: 0;
+
+      p,
+      li,
+      ol {
+        font-size: 1.5rem;
+        line-height: 1.4;
+        padding: 0.3em 0;
+      }
+
+      p + p {
+        text-indent: 1em;
+      }
+
+      hr {
+        background-color: var(--crepe-color-outline);
+        padding: 0;
+        height: 1px;
+        margin: 3em 0;
+      }
+    }
+
+    .ͼ1 .cm-scroller {
+      font-family: var(--crepe-font-code);
+      font-size: 0.8rem;
+    }
+  }
+}

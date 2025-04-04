@@ -17,9 +17,13 @@ const ACTIONS = {
 function handleNotesChange(state, action) {
   const notes = Array.isArray(action.payload) ? action.payload : [action.payload];
   notes.forEach(note => {
-    state.notes[note.id] = { ...note, lastEdit: new Date().getTime() };
+    state.notes[note.id] = {
+      ...note,
+      content: note.content.replaceAll(/<br\s*\/?>\s*/g, '\n'),
+    };
   });
 
+  // console.log(JSON.stringify(state.notes));
   if (!action.isInit) {
     remoteStorageClient.storeFile('application/json', 'notes.json', JSON.stringify(state.notes));
   }

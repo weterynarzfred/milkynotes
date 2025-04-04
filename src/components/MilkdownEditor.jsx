@@ -25,7 +25,8 @@ export default function MilkdownEditor({ note }) {
       },
       featureConfigs: {
         [Crepe.Feature.Placeholder]: {
-          text: '',
+          text: 'type here...',
+          mode: 'doc',
         },
       }
     });

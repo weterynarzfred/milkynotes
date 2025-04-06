@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import _ from "lodash";
-import { EditorStatus } from "@milkdown/core";
+import { EditorStatus, remarkStringifyOptionsCtx } from "@milkdown/core";
 import { Milkdown, useEditor } from "@milkdown/react";
 import { replaceAll } from "@milkdown/kit/utils";
 import { listenerCtx } from "@milkdown/kit/plugin/listener";
@@ -31,6 +31,11 @@ export default function MilkdownEditor({ note }) {
       }
     });
     crepe.editor.config(ctx => {
+      ctx.set(remarkStringifyOptionsCtx, {
+        handlers: {
+          break: () => "\n",
+        }
+      });
       ctx.get(listenerCtx).markdownUpdated((_ctx, markdown, prevMarkdown) => {
         if (markdown === prevMarkdown) return;
 
